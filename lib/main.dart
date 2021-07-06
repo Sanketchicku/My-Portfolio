@@ -1,10 +1,8 @@
 //@dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_particle_background/flutter_particle_background.dart';
+
 import 'package:url_launcher/url_launcher.dart';
-import 'package:animated_background/animated_background.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
   runApp(MyApp());
@@ -88,87 +86,80 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                     .evaluate(AlwaysStoppedAnimation(_controller2.value)),
                 body: Stack(
                   children: [
-                    AnimatedBackground(
-                      behaviour: RacingLinesBehaviour(
-                        direction: LineDirection.Ttb,
-                        numLines: 2000,
-                      ),
-                      vsync: this,
-                      child: SingleChildScrollView(
-                        child: Center(
-                          child: Column(
-                            children: <Widget>[
-                              CircleAvatar(
-                                radius: 100.0,
-                                backgroundImage: AssetImage('images/s.jpg'),
-                              ),
-                              Button(
-                                  c: Colors.green,
-                                  h: _animation.value,
-                                  p: 'images/stopstalk.png',
-                                  t: 'Click to see my STOPSTALK profile',
-                                  wb: 'https://www.stopstalk.com/user/profile/sanketchicku'),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
-                                  c: Colors.green,
-                                  h: _animation.value,
-                                  p: 'images/ln.jpeg',
-                                  t: 'Click to see my LINKEDIN profile',
-                                  wb: 'https://in.linkedin.com/in/sanket-kumar-mishra-376425164'),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
+                    SingleChildScrollView(
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+                            CircleAvatar(
+                              radius: 100.0,
+                              backgroundImage: AssetImage('images/s.jpg'),
+                            ),
+                            Button(
                                 c: Colors.green,
                                 h: _animation.value,
-                                p: 'images/tt.jpeg',
-                                t: 'Click to see my TWITTER profile',
-                                wb: 'https://twitter.com/sanketchicku',
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
+                                p: 'images/stopstalk.png',
+                                t: 'Click to see my STOPSTALK profile',
+                                wb: 'https://www.stopstalk.com/user/profile/sanketchicku'),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
                                 c: Colors.green,
                                 h: _animation.value,
-                                p: 'images/medim.png',
-                                t: 'Click to see my MEDIUM profile',
-                                wb: 'https://medium.com/@snktmishra2',
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
-                                  c: Colors.green,
-                                  h: _animation.value,
-                                  p: 'images/fb.jpeg',
-                                  t: 'Click to see my FACEBOOK profile',
-                                  wb: 'https://www.facebook.com/sanket.mishra.39/'),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
-                                  c: Colors.green,
-                                  h: _animation.value,
-                                  p: 'images/insta.png',
-                                  t: 'Click to see my INSTA profile',
-                                  wb: 'https://www.instagram.com/sanketchicku/'),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Button(
-                                  c: Colors.green,
-                                  h: _animation.value,
-                                  p: 'images/insta.png',
-                                  t: 'WHO AM I',
-                                  wb: 'https://pbs.twimg.com/media/ETNMew6UwAMg8ur.jpg'),
-                            ],
-                          ),
+                                p: 'images/ln.jpeg',
+                                t: 'Click to see my LINKEDIN profile',
+                                wb: 'https://in.linkedin.com/in/sanket-kumar-mishra-376425164'),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
+                              c: Colors.green,
+                              h: _animation.value,
+                              p: 'images/tt.jpeg',
+                              t: 'Click to see my TWITTER profile',
+                              wb: 'https://twitter.com/sanketchicku',
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
+                              c: Colors.green,
+                              h: _animation.value,
+                              p: 'images/medim.png',
+                              t: 'Click to see my MEDIUM profile',
+                              wb: 'https://medium.com/@snktmishra2',
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
+                                c: Colors.green,
+                                h: _animation.value,
+                                p: 'images/fb.jpeg',
+                                t: 'Click to see my FACEBOOK profile',
+                                wb: 'https://www.facebook.com/sanket.mishra.39/'),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
+                                c: Colors.green,
+                                h: _animation.value,
+                                p: 'images/insta.png',
+                                t: 'Click to see my INSTA profile',
+                                wb: 'https://www.instagram.com/sanketchicku/'),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Button(
+                                c: Colors.green,
+                                h: _animation.value,
+                                p: 'images/insta.png',
+                                t: 'WHO AM I',
+                                wb: 'https://pbs.twimg.com/media/ETNMew6UwAMg8ur.jpg'),
+                          ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               );
